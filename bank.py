@@ -1,26 +1,56 @@
 saldo = 1000
+opcao = 0
+cliente = ['fulano' , 'fulana' , 'fulaninho', 'fulaninha', 'pingo', 'fifi']
 print ('digite o numero')
 print ('[1] saque')
 print ('[2] deposito')
 print ('[3] saldo')
 print ('[4] falar com gerente')
-print ('[0] break')
+print ('[5] saber cliente')
+print ('[6] remover cliente')
+print ('[0] encerrar')
 numero = int(input())
-match numero:
-    case 1:
-        saque = int(input('de quanto seria o saque?'))
-        if saque > saldo:
-            print ('você não tem saldo o suficiente.')
-        else:
-            print ('ok, realizando contagem de notas... ... .. .... ... ... ...')
-            print (f'saldo atual = {saldo - saque}')
-    case 2:
-        depo = int(input('de quanto seria o deposito?'))
-        print (f'ok, deposito de {depo} efetuado com sucesso')
-        print (f'saldo atual = {saldo + depo}')
-    case 3:
-        print (f'seu saldo atual é {saldo} reais.')
-    case 4:
-        print ('o contato do gerente fulano de tal (whatsapp) é: (69) 4002-8922, caso queira entrar em contato via e-mail, é rogerinhopirocadelinguiçadefeijaoqueimadotortaoqueveioenvergadotortaopraesquerdaaa@operagx.com')
-    case 0:
-        print ('tenha um bom dia!')
+def add_cliente():
+    saber = input('qual seu nome? ')
+    if saber in cliente:
+                print (f'legal, {saber}, você é um cliente!')
+    else:
+        print ('voce nao eh um cliente, mas voce será agora!')
+        cliente.append(saber)
+        print(cliente)
+def remover_cliente():
+     know = input('insira nome')
+     if know in cliente:
+          cliente.remove(know)
+          print('ta, foi removido')
+          print(cliente)
+          
+     else:
+          print('nome nao ta na lista, daora')
+while opcao ==  0:
+    match numero:
+        case 1:
+            saque = int(input('de quanto seria o saque?'))
+            if saque > saldo:
+                print ('você não tem saldo o suficiente.')
+            else:
+                print ('ok, realizando contagem de notas... ... .. .... ... ... ...')
+                print (f'saldo atual = {saldo - saque}')
+        case 2:
+            depo = int(input('de quanto seria o deposito?'))
+            print (f'ok, deposito de {depo} efetuado com sucesso')
+            print (f'saldo atual = {saldo + depo}')
+        case 3:
+            print (f'seu saldo atual é {saldo} reais.')
+        case 4:
+            print ('o contato do gerente fulano de tal (whatsapp) é: (69) 4002-8922, caso queira entrar em contato via e-mail, é rogerinhopirocadelinguiçadefeijaoqueimadotortaoqueveioenvergadotortaopraesquerdaaa@operagx.com')
+            opcao = 1
+        case 0:
+            print ('tenha um bom dia!')
+            opcao = 1
+        case 5:
+            add_cliente()
+            opcao = 1
+        case 6:
+              remover_cliente()
+              opcao = 1

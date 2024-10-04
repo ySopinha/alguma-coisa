@@ -1,6 +1,14 @@
 saldo = 1000
 opcao = 0
 cliente = ['fulano' , 'fulana' , 'fulaninho', 'fulaninha', 'pingo', 'fifi']
+
+
+dicionario = [
+    {'nome': 'lilica legal uau querida', 'idade': '16', 'genero': 'feminino'},
+    {'nome': 'Mr. Cowboy Ratinho Fofinho', 'idade': '2', 'genero': 'ratinho eu acho'}
+]
+
+
 print ('digite o numero')
 print ('[1] saque')
 print ('[2] deposito')
@@ -16,6 +24,7 @@ while opcao == 0:
         adic = input('insira nome')
         cliente.append(adic)
         print (cliente)
+
     def add_cliente():
         saber = input('qual seu nome? ')
         if saber in cliente:

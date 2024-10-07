@@ -5,19 +5,23 @@ opcao = 0
 dicionario = {
      '07171' : {'nome' : 'lilica queridinha uau fofa', 'usuario' : 'lilica', 'senha' : '6969' },
      '07133' : {'nome' : 'oliver queridinho uau silly', 'usuario' : 'sosofi', 'senha' : '420420' },    
-     '07144' : {'nome' : 'pingo adora guardaroupa', 'usuario' : 'lilica', 'senha' : '6969' },
+     '07144' : {'nome' : 'pingo adora guardaroupa', 'usuario' : 'lilica', 'senha' : '6969' }
 }
 
 
 
 while opcao == 0:
     def cadastro():
-            cpf = int(input('insira cpf: '))
+            cpf = input('insira cpf: ')
             dicionario.get(cpf)
             nominho = input('Insira nome: ')
             senhanha = input('insira senha 4 a 6 : ')
             lista = nominho.split()
             usuario = lista[0]
+            qtd_senha = len(senhanha)
+            
+            dicionario[cpf] = {'nome' : 'pingo adora guardaroupa', 'usuario' : usuario, 'senha' : '6969' }
+                
             print(usuario)
             print(f'Seu usuário é {usuario}, use-o no log-on.')
             

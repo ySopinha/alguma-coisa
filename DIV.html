@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: center;
+            background-color: lightblue;
+            border: solid 2px grey;
+            width: 25%;
+            height: 700px;
+            display: inline-block;
+            border-radius: 16px;
+            box-shadow: 5px 4px 8px;
+        }
+
+
+        body{
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            /* v-v-v alinhamento vertical */
+            align-items: center;
+            /* v-v-v alinhamento horizontal */
+            justify-content: center;
+        }
+
+        
+
+
+    </style>
+
+</head>
+<body>
+    <div id="divisao1">
+        <form action="FORMULARIO2.html" method="post">
+            <h3>Formulario de novo cliente!</h3><hr>
+    
+            <label>Nome do cliente</label><br>
+            <input type="text" name="nome_cliente" required name=caixinha"><br>
+    
+            <label>Cpf</label><br>
+            <input type='number' name="Cpf" required><br>
+    
+            <label>Telefone</label><br>
+            <input type="tel" name="tel" required><br>
+    
+            <label>Gênero: </label><br>
+            <input type="radio" name="Genero" id="masc"><label for="masc">   Homem</label>
+            <input type="radio" name="Genero" id="fem"><label for="fem">   Mulher</label>
+            <input type="radio" name="Genero" id="outro"><label for="outro">   Outro</label><br><br>
+    
+            <label>O que você gosta de fazer?</label><br>
+            <input type="checkbox" id="esporte" name="esporte"><label for="esporte">esporte</label><br>
+            <input type="checkbox" id="cozinhar" name="cozinhar"><label for="cozinhar">cozinhar</label><br>
+            <input type="checkbox" id="musica" name="musica"><label for="musica">musica</label><br>
+            <input type="checkbox" id="videogame" name="videogame"><label for="videogame">videogame</label><br>
+    
+            <label for="Email">Email do cliente</label><br>
+            <input type="email" name="email"><br>
+    
+            <label>Senha do cliente</label><br>
+            <input type="password" required placeholder="minimo 8 caracteres" minlength="8" maxlength="16" name="senha"><br>
+    
+            <label>Estado civil</label><br>
+    
+            <br>
+    
+            <select required name="estado_civil">
+                <option></option>
+                <option>Casado(a)(e)</option>
+                <option>Solteiro</option>
+                <option>Separado</option>
+                <option>outros</option>
+            </select>
+    
+            <label>Qual a sua cor favorita?</label><br>
+            <input type="color" name="cor"><br>
+    
+            <label>Data de nascimento</label><br>
+            <input type="date" name="nascimento"><br>
+    
+    
+    
+            <input type="submit" value="Enviar algo">
+        </form>
+    </div>
+
+</body>
+</html>
